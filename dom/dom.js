@@ -1,3 +1,5 @@
+// selecting child using parent
+
 // if i want to access 2nd li
 
 const UL = document.querySelector("ul");
@@ -15,3 +17,13 @@ UL.children[1];
 // it will give us first li of ul
 
 // same as lastChild and lastChildElement
+// =======================================================================================
+
+// selectiong parent using child
+
+const LI = document.querySelector("li");
+LI.parentElement;
+// it will give ul
+
+LI.closest("body");
+// closest is used for ancestors bcz in this case body is ancestor of li
