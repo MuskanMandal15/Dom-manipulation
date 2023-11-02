@@ -45,3 +45,45 @@ UL.nextSibling;
 
 UL.nextElementSibling;
 // it will give us next sibling element that is button elementgit
+
+// ===================================================================
+// if we want to access first li that is tea, withoust using querySelector
+
+const ULL = document.body.firstElementChild.nextElementSibling;
+const FIRST_LI = ULL.firstElementChild;
+
+// console.log(FIRST_LI);
+
+// ===================================================================
+
+// Adding styles in js
+
+const SECTION = document.querySelector("section");
+SECTION.style.backgroundColor = "orange";
+
+// vdo- 160 styling dom elements
+
+// ===========================================================
+
+// Creating and inserting Elements
+// SECTION.innerHTML = "<h2> hello my name is muskan </h2>";
+
+//  so what happens here,  we've changed the innerHTML of section, so whatever presents in the past it will swap with the new one. and here <ul> and <li>'s are swap with the <h2>
+
+// fi we want to add another li inside the ul then
+
+UL.innerHTML = UL.innerHTML + "<li>beer</li>";
+console.log(UL.innerHTML);
+//  this is not a good practice bcz we know that we've added new li but it also re-renders all li's
+
+// insertAdjacentElement pending
+
+// ========================================================
+
+// inserting another li in ul using append child
+const LIST = document.createElement("li");
+UL.appendChild(LIST);
+LIST.textContent = "mojito";
+console.log(UL);
+
+LIST.style.backgroundColor = "pink";
