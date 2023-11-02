@@ -27,3 +27,21 @@ LI.parentElement;
 
 LI.closest("body");
 // closest is used for ancestors bcz in this case body is ancestor of li
+
+// ====================================================================================
+
+// selecting previousSibling, previousElementSibling
+
+UL.previousSibling;
+//  it give us #text thing bcz it also counts white space and line-break
+
+UL.previousElementSibling;
+//  it will give us <header></header> bcz that was the previous sibling of ul
+
+// same as next sibling
+
+UL.nextSibling;
+// it will give us white space
+
+UL.nextElementSibling;
+// it will give us next sibling element that is button elementgit
