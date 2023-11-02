@@ -76,8 +76,6 @@ UL.innerHTML = UL.innerHTML + "<li>beer</li>";
 console.log(UL.innerHTML);
 //  this is not a good practice bcz we know that we've added new li but it also re-renders all li's
 
-// insertAdjacentElement pending
-
 // ========================================================
 
 // inserting another li in ul using append child
@@ -87,3 +85,30 @@ LIST.textContent = "mojito";
 console.log(UL);
 
 LIST.style.backgroundColor = "pink";
+
+// we can add extra text using append("and some text")
+// if we want to add something before <li>tea</li> then will use prepend
+// UL.prepend(LIST);
+// if we want to add something before last li tehn will use   UL.lastElementChild.before(LIST), then it will came back from first place
+// UL.lastElementChild.before(LIST);
+// UL.lastElementChild.after(LIST);
+// UL.firstElementChild.replaceWith(LIST); // tea will replace with mojito, first li is tea and new li which is LIST is mojito
+
+const SECOND_LI = LIST.children[1];
+const NEW_LI = document.createElement("li");
+NEW_LI.textContent = "apple juice";
+LIST.insertAdjacentElement("afterend", NEW_LI);
+console.log(LIST);
+
+const NEW_LI2 = NEW_LI.cloneNode(true);
+LIST.append(NEW_LI, NEW_LI2); // clone same thing with text inside, if we pass false(which is default) then it will only clone the li not text inside it
+
+// =============================================================================
+// REMOVING ELEMENTS
+//  1. method
+//    UL.remove();
+//    console.log(UL);
+
+// 2. method
+UL.parentElement.removeChild(UL);
+console.log(UL);
