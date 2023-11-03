@@ -44,7 +44,7 @@ UL.nextSibling;
 // it will give us white space
 
 UL.nextElementSibling;
-// it will give us next sibling element that is button elementgit
+// it will give us next sibling element that is button element in it
 
 // ===================================================================
 // if we want to access first li that is tea, withoust using querySelector
